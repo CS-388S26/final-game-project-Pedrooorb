@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2434602336399189613, guid: fd6598aab8441ee4ba49e776d85be757, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2434602336399189613, guid: fd6598aab8441ee4ba49e776d85be757, type: 3}
       propertyPath: m_LocalScale.x
@@ -66,10 +66,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3063187999741754583, guid: fd6598aab8441ee4ba49e776d85be757, type: 3}
       propertyPath: m_Name
-      value: Knife03_1mat Variant
+      value: Knife
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063187999741754583, guid: fd6598aab8441ee4ba49e776d85be757, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3063187999741754583, guid: fd6598aab8441ee4ba49e776d85be757, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5297415132513885872}
   m_SourcePrefab: {fileID: 100100000, guid: fd6598aab8441ee4ba49e776d85be757, type: 3}
+--- !u!1 &5761297923445608703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3063187999741754583, guid: fd6598aab8441ee4ba49e776d85be757, type: 3}
+  m_PrefabInstance: {fileID: 7311203317578951720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5297415132513885872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5761297923445608703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe0be1660d7dc845ae53266a2f831fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 4
+  moveSpeed: 100

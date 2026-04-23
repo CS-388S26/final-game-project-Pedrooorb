@@ -234,7 +234,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &937288368
 BoxCollider:
@@ -423,6 +423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1497708899}
+  - component: {fileID: 1497708900}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -445,6 +446,94 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1497708900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497708898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e107e622369bf428e33bdb3709450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnSequence: {fileID: 11400000, guid: f8471a9ffdb45c949afdf5d87d9d6c2d, type: 2}
+  autoStart: 1
+  loop: 0
+--- !u!1 &1597304231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5761297923445608703, guid: 39b4cbd2d8a4bd7478c0225e39608407, type: 3}
+  m_PrefabInstance: {fileID: 1303370365881779616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1910558251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1910558253}
+  - component: {fileID: 1910558252}
+  - component: {fileID: 1910558254}
+  m_Layer: 0
+  m_Name: Cutter
+  m_TagString: Cutter
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1910558252
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910558251}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1910558253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910558251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.51, y: -1.7, z: 13.47}
+  m_LocalScale: {x: 9.535713, y: 9.535713, z: 9.041495}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1910558254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910558251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e271d96cc598647b22e78da495f35f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Knife: {fileID: 1597304231}
+  explosionPrefab: {fileID: 4032015717940687206, guid: af02d1762211dab4a90c2028d42afb13, type: 3}
 --- !u!1001 &1303370365881779616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -463,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4953938988602460741, guid: 39b4cbd2d8a4bd7478c0225e39608407, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.79
+      value: 5.28
       objectReference: {fileID: 0}
     - target: {fileID: 4953938988602460741, guid: 39b4cbd2d8a4bd7478c0225e39608407, type: 3}
       propertyPath: m_LocalPosition.z
@@ -499,9 +588,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5761297923445608703, guid: 39b4cbd2d8a4bd7478c0225e39608407, type: 3}
       propertyPath: m_Name
-      value: Knife03_1mat
+      value: Knife
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3660728587429989354, guid: 39b4cbd2d8a4bd7478c0225e39608407, type: 3}
+    - {fileID: 2483596033418292273, guid: 39b4cbd2d8a4bd7478c0225e39608407, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
