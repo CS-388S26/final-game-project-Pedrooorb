@@ -16,6 +16,13 @@ public class KnifeController : MonoBehaviour
     private Vector3 _targetPos;
     private float _timeElapsed = 0f;
 
+    //accelerator
+    public float shakeThreshold = 2.5f;
+    public float requiredShakeAmount = 1000000000000f;
+
+    private Vector3 _lastAcceleration;
+    public float _currentShakeAmount = 0f;
+
     void Start()
     {
         _startPos = transform.position;
@@ -24,6 +31,12 @@ public class KnifeController : MonoBehaviour
     void Update()
     {
         HandleCuttingState();
+
+        if (IsStunned)
+        {
+            DetectShake();
+            return;
+        }
 
         if (Input.touchCount > 0 && !IsStunned)
         {
@@ -42,6 +55,22 @@ public class KnifeController : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, _startPos, moveSpeed * Time.deltaTime);
             if (transform.position == _startPos)
                 State = KnifeState.Idle;
+        }
+    }
+
+    private void DetectShake()
+    {
+        Vector3 acceleration = Input.acceleration;
+        Vector3 delta = acceleration - _lastAcceleration;
+        _lastAcceleration = acceleration;
+
+        if (delta.sqrMagnitude >= shakeThreshold * shakeThreshold)
+            _currentShakeAmount += delta.magnitude;
+
+        if (_currentShakeAmount >= requiredShakeAmount)
+        {
+            IsStunned = false;
+            _currentShakeAmount = 0f;
         }
     }
 
