@@ -1,3 +1,17 @@
+/**
+ * @file
+ *  Cutter.cs
+ * @author
+ *  Pedro Roman, 540001522, pedro.r@digipen.edu
+ * @date
+ *  24/04/2026
+ * @brief
+ *  Controls the cutting behaviour
+ * @copyright
+ *  Copyright (C) 2026 DigiPen Institute of Technology.
+ */
+
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +31,9 @@ public class Cutter : MonoBehaviour
     public AudioClip explosionSound;
     public AudioClip winSound;
 
+    /**
+    * @brief Called when Cutter collides with gameobject
+    */
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Slice")

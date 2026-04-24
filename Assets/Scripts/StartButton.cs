@@ -1,24 +1,23 @@
 /**
  * @file
- *  Level2Button.cs
+ *  StartButton.cs
  * @author
  *  Pedro Roman, 540001522, pedro.r@digipen.edu
  * @date
  *  24/04/2026
  * @brief
- *  Starts level 2 when touched
+ *  Starts the game when touched
  * @copyright
  *  Copyright (C) 2026 DigiPen Institute of Technology.
  */
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public class Level2Button : MonoBehaviour, IPointerClickHandler
+public class StartButton : MonoBehaviour, IPointerClickHandler
 {
-    public GameManager gameManager;
-
     public void OnPointerClick(PointerEventData eventData)
     {
-        gameManager.LoadLevel2();
+        SceneManager.LoadScene("Game");
     }
 }

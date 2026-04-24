@@ -1,3 +1,15 @@
+/**
+ * @file
+ *  GameManager.cs
+ * @author
+ *  Pedro Roman, 540001522, pedro.r@digipen.edu
+ * @date
+ *  24/04/2026
+ * @brief
+ *  Manages the level sequences and UI panels
+ * @copyright
+ *  Copyright (C) 2026 DigiPen Institute of Technology.
+ */
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;

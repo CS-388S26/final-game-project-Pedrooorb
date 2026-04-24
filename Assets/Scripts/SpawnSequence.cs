@@ -1,3 +1,15 @@
+/**
+ * @file
+ *  SpawnSequence.cs
+ * @author
+ *  Pedro Roman, 540001522, pedro.r@digipen.edu
+ * @date
+ *  24/04/2026
+ * @brief
+ *  Serializes level sequences into editor
+ * @copyright
+ *  Copyright (C) 2026 DigiPen Institute of Technology.
+ */
 using System.Collections.Generic;
 using UnityEngine;
 
