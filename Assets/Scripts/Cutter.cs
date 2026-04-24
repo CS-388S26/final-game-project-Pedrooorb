@@ -11,6 +11,12 @@ public class Cutter : MonoBehaviour
     public GameObject ScoreManager;
     public GameManager gameManager;
 
+    //Sound effect
+    public AudioSource audioSource;
+    public AudioClip cutSound;
+    public AudioClip explosionSound;
+    public AudioClip winSound;
+
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Slice")
@@ -26,6 +32,9 @@ public class Cutter : MonoBehaviour
 
                 //handle score
                 ScoreManager.GetComponent<ScoreManager>().AddToScore(1);
+
+                //handle sound
+                audioSource.PlayOneShot(cutSound);
             }
             Destroy(col.gameObject, 4f);
             Destroy(col.gameObject.transform.parent.gameObject, 4f);
@@ -43,6 +52,9 @@ public class Cutter : MonoBehaviour
 
                 //subtract pts
                 ScoreManager.GetComponent<ScoreManager>().SubToScore(5);
+
+                //handle sound
+                audioSource.PlayOneShot(explosionSound);
             }
             else
             {
@@ -53,6 +65,9 @@ public class Cutter : MonoBehaviour
         {
             //go to next level or end
             gameManager.EndLevel();
+
+            //handle sound
+            audioSource.PlayOneShot(winSound);
 
             Destroy(col.gameObject, 4f);
         }
