@@ -24,8 +24,89 @@ MonoBehaviour:
     delayBefore: 1
     positionOffset: {x: 0, y: 0, z: 0}
   - prefab: {fileID: 5976890765241038643, guid: ab4f40189db93524fb31ff3b7eb8e4ee, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 3527735587010797802, guid: 353a9adc0b0d54641ad251ffdf5d3195, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 2, z: 0}
+  - prefab: {fileID: 8104342608455858505, guid: 2f82367890d202b4eb0699faca658749, type: 3}
+    delayBefore: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 5976890765241038643, guid: ab4f40189db93524fb31ff3b7eb8e4ee, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 4843155552776689379, guid: 52522507d79077e4b9a3f986ca363e1e, type: 3}
+    delayBefore: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 2958381304271370271, guid: ad98535489216754f980cc0aebc2e241, type: 3}
+    delayBefore: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 8104342608455858505, guid: 2f82367890d202b4eb0699faca658749, type: 3}
     delayBefore: 1
     positionOffset: {x: 0, y: 0, z: 0}
   - prefab: {fileID: 3527735587010797802, guid: 353a9adc0b0d54641ad251ffdf5d3195, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 2, z: 0}
+  - prefab: {fileID: 5976890765241038643, guid: ab4f40189db93524fb31ff3b7eb8e4ee, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 5976890765241038643, guid: ab4f40189db93524fb31ff3b7eb8e4ee, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 4843155552776689379, guid: 52522507d79077e4b9a3f986ca363e1e, type: 3}
     delayBefore: 1
     positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 3527735587010797802, guid: 353a9adc0b0d54641ad251ffdf5d3195, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 2, z: 0}
+  - prefab: {fileID: 2958381304271370271, guid: ad98535489216754f980cc0aebc2e241, type: 3}
+    delayBefore: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 2958381304271370271, guid: ad98535489216754f980cc0aebc2e241, type: 3}
+    delayBefore: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 3527735587010797802, guid: 353a9adc0b0d54641ad251ffdf5d3195, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 2, z: 0}
+  - prefab: {fileID: 3527735587010797802, guid: 353a9adc0b0d54641ad251ffdf5d3195, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 2, z: 0}
+  - prefab: {fileID: 5976890765241038643, guid: ab4f40189db93524fb31ff3b7eb8e4ee, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 4843155552776689379, guid: 52522507d79077e4b9a3f986ca363e1e, type: 3}
+    delayBefore: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 3527735587010797802, guid: 353a9adc0b0d54641ad251ffdf5d3195, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 2, z: 0}
+  - prefab: {fileID: 3527735587010797802, guid: 353a9adc0b0d54641ad251ffdf5d3195, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 2, z: 0}
+  - prefab: {fileID: 3527735587010797802, guid: 353a9adc0b0d54641ad251ffdf5d3195, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 2, z: 0}
+  - prefab: {fileID: 2958381304271370271, guid: ad98535489216754f980cc0aebc2e241, type: 3}
+    delayBefore: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 5976890765241038643, guid: ab4f40189db93524fb31ff3b7eb8e4ee, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 5976890765241038643, guid: ab4f40189db93524fb31ff3b7eb8e4ee, type: 3}
+    delayBefore: 0.5
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 8104342608455858505, guid: 2f82367890d202b4eb0699faca658749, type: 3}
+    delayBefore: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 4843155552776689379, guid: 52522507d79077e4b9a3f986ca363e1e, type: 3}
+    delayBefore: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 8104342608455858505, guid: 2f82367890d202b4eb0699faca658749, type: 3}
+    delayBefore: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 2958381304271370271, guid: ad98535489216754f980cc0aebc2e241, type: 3}
+    delayBefore: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+  - prefab: {fileID: 2081982189668610497, guid: 3b9b55d12c6fbd8429dfe728de15a656, type: 3}
+    delayBefore: 1
+    positionOffset: {x: 0, y: 5, z: 0}

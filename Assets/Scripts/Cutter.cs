@@ -9,6 +9,7 @@ public class Cutter : MonoBehaviour
     public GameObject Knife;
     public GameObject explosionPrefab;
     public GameObject ScoreManager;
+    public GameManager gameManager;
 
     void OnTriggerEnter(Collider col)
     {
@@ -24,7 +25,7 @@ public class Cutter : MonoBehaviour
                 col.gameObject.GetComponent<Rigidbody>().AddForce(RandomAngle * UnityEngine.Random.Range(50, 70), ForceMode.Impulse);
 
                 //handle score
-                ScoreManager.GetComponent<ScoreManager>().AddToScore(10);
+                ScoreManager.GetComponent<ScoreManager>().AddToScore(1);
             }
             Destroy(col.gameObject, 4f);
             Destroy(col.gameObject.transform.parent.gameObject, 4f);
@@ -41,7 +42,7 @@ public class Cutter : MonoBehaviour
                 Destroy(explosion, 1f);
 
                 //subtract pts
-                ScoreManager.GetComponent<ScoreManager>().SubToScore(50);
+                ScoreManager.GetComponent<ScoreManager>().SubToScore(5);
             }
             else
             {
@@ -50,9 +51,10 @@ public class Cutter : MonoBehaviour
         }
         else if (col.gameObject.tag == "Trophy")
         {
-            //show score 
-            int score = ScoreManager.GetComponent<ScoreManager>().GetScore();
             //go to next level or end
+            gameManager.EndLevel();
+
+            Destroy(col.gameObject, 4f);
         }
     }
 }
