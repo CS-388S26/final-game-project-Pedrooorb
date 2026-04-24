@@ -26,14 +26,17 @@ public class Spawner : MonoBehaviour
 
     private Coroutine _spawnCoroutine;
 
-    // ---------------------------------------------------------------
-
+    /**
+    * @brief Called at the beginning
+    */
     private void Start()
     {
         if (autoStart)
             StartSequence();
     }
-
+    /**
+    * @brief Starts or restarts the spawn sequence coroutine.
+    */
     public void StartSequence()
     {
         if (_spawnCoroutine != null)
@@ -41,7 +44,9 @@ public class Spawner : MonoBehaviour
 
         _spawnCoroutine = StartCoroutine(RunSequence());
     }
-
+    /**
+    * @brief Stops the spawn sequence mid-way if it is running.
+    */
     public void StopSequence()
     {
         if (_spawnCoroutine != null)
@@ -50,9 +55,10 @@ public class Spawner : MonoBehaviour
             _spawnCoroutine = null;
         }
     }
-
-    // ---------------------------------------------------------------
-
+    /**
+    * @brief Coroutine that iterates through all entries in the SpawnSequence,
+    *        waiting the specified delay before spawning each prefab.
+    */
     private IEnumerator RunSequence()
     {
         if (spawnSequence == null)
@@ -75,7 +81,10 @@ public class Spawner : MonoBehaviour
         OnSequenceComplete?.Invoke();
         _spawnCoroutine = null;
     }
-
+    /**
+    * @brief Instantiates the prefab defined in the entry at the spawner's
+    *        position plus any offset, preserving the prefab's original rotation.
+    */
     private void SpawnEntry(SpawnEntry entry)
     {
         if (entry.prefab == null)

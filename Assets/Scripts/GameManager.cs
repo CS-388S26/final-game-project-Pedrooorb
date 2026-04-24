@@ -29,11 +29,16 @@ public class GameManager : MonoBehaviour
 
     public ScoreManager scoreManager;
 
+    /**
+    * @brief Called at beginning
+    */
     void Start()
     {
         endLevelPanel.SetActive(false);
     }
-
+    /**
+    * @brief Shows the final score and ends the level
+    */
     public void EndLevel()
     {
         spawner.StopSequence();
@@ -41,7 +46,9 @@ public class GameManager : MonoBehaviour
         endLevelPanel.SetActive(true);
         level2Button.SetActive(_currentLevel < 2);
     }
-
+    /**
+    * @brief Loads 2 sequence
+    */
     public void LoadLevel2()
     {
         _currentLevel = 2;

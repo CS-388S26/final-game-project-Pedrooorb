@@ -16,7 +16,9 @@ using UnityEngine.EventSystems;
 public class Level2Button : MonoBehaviour, IPointerClickHandler
 {
     public GameManager gameManager;
-
+    /**
+    * @brief Called on touch
+    */
     public void OnPointerClick(PointerEventData eventData)
     {
         gameManager.LoadLevel2();

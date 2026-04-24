@@ -18,7 +18,9 @@ public class MainMenu : MonoBehaviour, IPointerClickHandler
 {
     public GameObject startButton;
     public GameObject exitButton;
-
+    /**
+    * @brief Called on touch
+    */
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.pointerClick == startButton)

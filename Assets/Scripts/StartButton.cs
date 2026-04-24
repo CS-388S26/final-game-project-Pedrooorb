@@ -16,6 +16,9 @@ using UnityEngine.EventSystems;
 
 public class StartButton : MonoBehaviour, IPointerClickHandler
 {
+    /**
+    * @brief Called when touching or clicking the UI button
+    */
     public void OnPointerClick(PointerEventData eventData)
     {
         SceneManager.LoadScene("Game");

@@ -13,6 +13,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// ScriptableObject asset that defines a full level spawn sequence.
 [CreateAssetMenu(fileName = "NewSpawnSequence", menuName = "Levels/Spawn Sequence")]
 public class SpawnSequence : ScriptableObject
 {
@@ -21,6 +22,8 @@ public class SpawnSequence : ScriptableObject
     public List<SpawnEntry> entries = new List<SpawnEntry>();
 }
 
+/// Represents a single spawn event: which prefab to spawn,
+/// how long to wait before spawning it, and an optional position offset.
 [System.Serializable]
 public class SpawnEntry
 {

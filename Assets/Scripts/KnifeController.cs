@@ -14,16 +14,19 @@ using UnityEngine;
 
 public class KnifeController : MonoBehaviour
 {
+    //movement animation
     public float moveDistance = 2f;
     public float moveSpeed = 5f;
     public float cuttingTimeFrame = 0.2f;
 
+    //knife states
     public enum KnifeState { Idle, MovingDown, MovingUp }
     public KnifeState State { get; private set; } = KnifeState.Idle;
     public bool IsCutting { get; private set; } = false;
 
     public bool IsStunned { get; set; } = false;
 
+    //movement animation 
     private Vector3 _startPos;
     private Vector3 _targetPos;
     private float _timeElapsed = 0f;
@@ -35,11 +38,16 @@ public class KnifeController : MonoBehaviour
     private Vector3 _lastAcceleration;
     public float _currentShakeAmount = 0f;
 
+    /**
+    * @brief Called at beginning
+    */
     void Start()
     {
         _startPos = transform.position;
     }
-
+    /**
+    * @brief Called at every frame
+    */
     void Update()
     {
         HandleCuttingState();
@@ -69,7 +77,9 @@ public class KnifeController : MonoBehaviour
                 State = KnifeState.Idle;
         }
     }
-
+    /**
+    * @brief Handles accelerator logic to de-stun player
+    */
     private void DetectShake()
     {
         Vector3 acceleration = Input.acceleration;
@@ -85,7 +95,9 @@ public class KnifeController : MonoBehaviour
             _currentShakeAmount = 0f;
         }
     }
-
+    /**
+    * @brief Handles current state of the knife
+    */
     private void HandleCuttingState()
     {
         if (Input.touchCount > 0 && !IsCutting && !IsStunned)
@@ -103,13 +115,17 @@ public class KnifeController : MonoBehaviour
             }
         }
     }
-
+    /**
+    * @brief Set up for the knife to move down
+    */
     private void StartMovingDown()
     {
         _targetPos = _startPos + Vector3.down * moveDistance;
         State = KnifeState.MovingDown;
     }
-
+    /**
+    * @brief Set up for the knife to move up
+    */
     private void StartMovingUp()
     {
         State = KnifeState.MovingUp;

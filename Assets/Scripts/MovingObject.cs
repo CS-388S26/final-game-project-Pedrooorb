@@ -17,7 +17,9 @@ using UnityEngine;
 public class MovingObject : MonoBehaviour
 {
     public float speed = 20f;
-
+    /**
+    * @brief Called every frame to move object
+    */
     void Update()
     {
         transform.Translate(0, 0, -speed * Time.deltaTime, Space.World);
